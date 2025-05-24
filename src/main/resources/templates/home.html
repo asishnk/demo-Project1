@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head data-th-replace="~{fragment :: head(~{:: link})}">
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <header data-th-replace="~{fragment :: header}"></header>
+    <main>
+      <nav data-th-replace="~{fragment :: nav('/new-book','New Book')}"></nav>
+
+      <section>
+        <article data-th-each="book :${books}" data-th-object="${book}">
+          <div class="card-head">
+            <img
+              data-th-src="|/book/image/*{bookId}|"
+              alt="......."
+              style="height: 200px"
+            />
+          </div>
+          <div class="card-body">
+            <h4 data-th-text="*{bookName}"></h4>
+            <a data-th-href="|/details?bookId=*{bookId}|" class="anchor"
+              >Read more</a
+            >
+          </div>
+          <div class="card-footer flex-between p-half">
+            <a data-th-href="|/update-book?id=*{bookId}|" class="anchor"
+              >Update</a
+            >
+            <button
+              class="link-button anchor"
+              type="button"
+              data-th-onClick="|onRemove(*{bookId})|"
+            >
+              Remove
+            </button>
+            <!-- <a data-th-href="|/remove-book?id=*{bookId}|">Delete</a> -->
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="/js/home.js"></script>
+  </body>
+</html>

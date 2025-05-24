@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color-scheme: dark white;
+}
+body {
+  background-color: #7c00fe;
+  font-family: "Lexend", sans-serif;
+  color: #f5004f;
+}
+header {
+  background-color: #f9e400;
+  padding: 1rem;
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.3);
+}
+header h1 {
+  text-shadow: 10px 20px 20px rgba(0, 0, 0, 0.5);
+}
+main {
+  width: 80%;
+  margin: 2rem auto;
+}
+main nav {
+  text-align: right;
+}
+main nav a {
+  font-size: 1.2rem;
+  color: #ffaf00;
+  text-decoration: none;
+  background-color: #7c00fe;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.3);
+}
+main section {
+  margin-top: 1rem;
+}
